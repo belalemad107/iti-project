@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iti_project/bottomnavi.dart';
 
 main(List<String> args) {
   runApp(App());
@@ -261,7 +262,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 InkWell(
                   onTap: () {
                     if (formKey.currentState!.validate()) {
-                      print('true');
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Bottomnavi()));
                     }
                   },
                   child: Container(
